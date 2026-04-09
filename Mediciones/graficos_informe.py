@@ -8,10 +8,6 @@ import matplotlib.pyplot as plt
 random.seed(42)
 np.random.seed(42)
 def tiempo_minimo(rivales):
-    """
-    Algoritmo Greedy: Ordenar por tiempo de ayudante (a_i) descendente.
-    Complejidad: O(n log n) debido al sorted().
-    """
     rivales_ordenados = sorted(rivales, key=lambda x: x[1], reverse=True)
     tiempo_scaloni = 0
     tiempo_total = 0 
