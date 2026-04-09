@@ -12,12 +12,12 @@ def tiempo_minimo(rivales):
         final = tiempo_scaloni + a_i
         tiempo_total = max(tiempo_total, final)
 
-    return tiempo_total
+    return tiempo_total, rivales_ordenados
 
 
 def main():
     if len(sys.argv) < 2:
-        print("Uso: python3 tp1.py Datos/archivo.txt")
+        print("Uso: python3 tp1.py archivo.txt")
         return
 
     ruta_archivo = sys.argv[1]
@@ -38,9 +38,13 @@ def main():
                     rivales.append((s_i, a_i))
   
         resultado = tiempo_minimo(rivales)
-        
-        print("Resultado:", resultado)
+        tiempo_total, rivales_ordenados = resultado
+
+        print("=== Resultado ===\n")  
+        print(f"Tiempo mínimo total: {tiempo_total}\n")
+        print("Orden de los rivales:", rivales_ordenados)
     
+
        
     except FileNotFoundError:
         print("Error: archivo no encontrado")
@@ -49,4 +53,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
