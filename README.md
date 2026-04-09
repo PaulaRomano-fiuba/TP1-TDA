@@ -34,4 +34,4 @@ python3 mediciones/graficos_informe.py
 python -m pip install -r requirements.txt
 ```
 ## Informe
-[ver informe completo] ()
+[ver informe completo](https://github.com/PaulaRomano-fiuba/TP1-TDA/blob/main/Informe/TP1__Algoritmos_Greedy.pdf)
